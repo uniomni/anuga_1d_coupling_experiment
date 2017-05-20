@@ -1,3 +1,20 @@
+# Installation instructions
+# Assumptions:
+# - GitHub account exists
+
+
+# Create workspace
+mkdir ~/sandpit
+
+# Install git
+sudo apt-get install git
+
+# Setup GitHub SSH keeys
+ssh-keygen -t rsa -b 4096 -C "<email address>"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+sudo apt-get install xclip
+xclip -sel clip < ~/.ssh/id_rsa.pub
 
 
 # Install ANUGA as per docs
